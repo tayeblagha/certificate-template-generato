@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
@@ -10,7 +10,13 @@ export default function CertificateForm({ formData, setFormData, selectedTemplat
   generatePDF: () => void;
 }) {
   const [step, setStep] = useState(1);
-  
+
+  useEffect(() => {
+  if (step === 2 && !formData.date) {
+    const today = new Date().toISOString().split('T')[0];
+    setFormData((prev: FormData) => ({ ...prev, date: today }));
+  }
+}, [step, formData.date, setFormData]);
 
   const handleLogoUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
