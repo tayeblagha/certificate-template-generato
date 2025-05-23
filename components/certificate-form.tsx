@@ -11,7 +11,7 @@ export default function CertificateForm({ formData, setFormData, selectedTemplat
 }) {
   const [step, setStep] = useState(1);
 
-  
+
 
   const handleLogoUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -113,7 +113,7 @@ export default function CertificateForm({ formData, setFormData, selectedTemplat
           </div>
         </div>
       )}
-      
+
       <div className="flex justify-between">
         {step > 1 && (
           <Button type="button" variant="outline" onClick={() => setStep(step - 1)}>

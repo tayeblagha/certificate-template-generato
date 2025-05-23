@@ -8,3 +8,12 @@ export interface FormData {
   borderStyle: string;
   logo: string | null;
 }
+
+export interface TemplateCardData
+{
+  colorClass: string;
+  title: string;
+  description: string;
+  templateNumber: number;
+  onSelect: (template: number) => void;
+}
