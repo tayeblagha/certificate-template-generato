@@ -58,7 +58,6 @@ npm run dev
 ### Certificate Information
 - **Form Component:** `components/certificate-form.tsx`
 - **Live Preview:** `components/certificate-preview.tsx`
-- **Validation:** Using Zod for field validation
 
 ### Recipient Details
 - Dynamic date picker component
