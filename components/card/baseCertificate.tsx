@@ -7,13 +7,16 @@ interface BaseCertificateProps {
 
 const BaseCertificate = forwardRef<HTMLDivElement, BaseCertificateProps>(
   ({ formData, children }, ref) => (
-    <div
-      className={`w-[210mm] h-[297mm] border-${formData.borderStyle} border-4 mx-auto`}
-      style={{ borderColor: formData.color }}
-      ref={ref}
-    >
-      {children}
-    </div>
+   <div
+  className={`w-full max-w-[210mm] h-[297mm] mx-auto border-4`}
+  style={{ 
+    borderColor: formData.color,
+    borderStyle: formData.borderStyle
+  }}
+  ref={ref}
+>
+  {children}
+</div>
   )
 );
 

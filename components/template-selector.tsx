@@ -2,9 +2,9 @@ import TemplateCard from '@/components/card/template-selector-card';
 
 export default function TemplateSelector({ onSelect }: { onSelect: (template: number) => void }) {
   return (
-    <div className="flex-center-col justify-center min-h-screen gap-8">
-      <h1 className="text-3xl font-bold">Select a Template</h1>
-      <div className="flex gap-4">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-8 p-4">
+      <h1 className="text-3xl font-bold text-center">Select a Template</h1>
+      <div className="flex flex-col gap-4 w-full max-w-md md:flex-row md:justify-center md:max-w-4xl">
         <TemplateCard
           colorClass="bg-blue-600"
           title="Formal"

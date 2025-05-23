@@ -18,13 +18,14 @@ const FormalTemplate = forwardRef<HTMLDivElement, FormalTemplateProps>(
         <p className="text-lg uppercase tracking-widest">{formData.organization}</p>
         <div className="w-32 h-1 bg-current mx-auto my-4" />
       </div>
-      <h1 className="text-4xl font-bold mb-8" style={{ color: formData.color }}>
-        {formData.title}
-      </h1>
+      <h1 className="text-3xl lg:text-4xl font-bold mb-4 lg:mb-8" style={{ color: formData.color }}>
+  {formData.title}
+</h1>
       <h1> Test Formal</h1>
       <p className="text-xl mb-12">This certificate is hereby formally presented to</p>
-      <h2 className="text-5xl font-semibold mb-12 border-b-2 pb-4">{formData.recipientName}</h2>
-      <div className="flex justify-between w-full mt-16">
+<h2 className="text-3xl lg:text-5xl font-semibold mb-8 lg:mb-12 border-b-2 pb-2 lg:pb-4">
+  {formData.recipientName}
+</h2>      <div className="flex justify-between w-full mt-16">
         <div className="text-left">
           <p className="border-t-2 pt-4">{new Date(formData.date).toLocaleDateString()}</p>
           <p className="text-sm">Date of Issuance</p>

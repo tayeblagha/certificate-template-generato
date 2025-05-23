@@ -136,3 +136,21 @@
     print-color-adjust: exact;
   }
 }
+
+@layer utilities {
+  .certificate-scale {
+    @apply transform origin-top;
+  }
+  
+  @media (max-width: 768px) {
+    .certificate-scale {
+      transform: scale(0.75);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .certificate-scale {
+      transform: scale(0.6);
+    }
+  }
+}

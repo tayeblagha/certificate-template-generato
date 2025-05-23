@@ -114,16 +114,24 @@ export default function CertificateForm({ formData, setFormData, selectedTemplat
         </div>
       )}
 
-      <div className="flex justify-between">
-        {step > 1 && (
-          <Button type="button" variant="outline" onClick={() => setStep(step - 1)}>
-            Previous
-          </Button>
-        )}
-        <Button type="submit">
-          {step === 4 ? 'Generate PDF' : 'Next'}
-        </Button>
-      </div>
+    <div className="flex flex-col-reverse sm:flex-row justify-between gap-4">
+  {step > 1 && (
+    <Button 
+      type="button" 
+      variant="outline" 
+      onClick={() => setStep(step - 1)}
+      className="w-full sm:w-auto"
+    >
+      Previous
+    </Button>
+  )}
+  <Button 
+    type="submit" 
+    className="w-full sm:w-auto"
+  >
+    {step === 4 ? 'Generate PDF' : 'Next'}
+  </Button>
+</div>
     </form>
   );
 }

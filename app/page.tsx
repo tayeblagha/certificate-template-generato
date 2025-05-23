@@ -22,23 +22,23 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {!selectedTemplate ? (
-        <TemplateSelector onSelect={setSelectedTemplate} />
-      ) : (
-        <div className="grid md:grid-cols-2 gap-8 p-6">
-          <CertificateForm
-            formData={formData}
-            setFormData={setFormData}
-            selectedTemplate={selectedTemplate}
-            generatePDF={() => generateCertificatePDF(certificateRef)}
-          />
-          <CertificatePreview 
-            formData={formData} 
-            template={selectedTemplate} 
-            ref={certificateRef}
-          />
-        </div>
-      )}
+  {!selectedTemplate ? (
+    <TemplateSelector onSelect={setSelectedTemplate} />
+  ) : (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4 lg:p-8">
+      <CertificateForm
+        formData={formData}
+        setFormData={setFormData}
+        selectedTemplate={selectedTemplate}
+        generatePDF={() => generateCertificatePDF(certificateRef)}
+      />
+      <CertificatePreview 
+        formData={formData} 
+        template={selectedTemplate} 
+        ref={certificateRef}
+      />
     </div>
+  )}
+</div>
   );
 }

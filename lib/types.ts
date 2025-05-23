@@ -16,4 +16,5 @@ export interface TemplateCardData
   description: string;
   templateNumber: number;
   onSelect: (template: number) => void;
+  className?:string
 }
