@@ -52,7 +52,7 @@ npm run dev
 
 ### Template Selection
 - **Component:** `components/template-selector.tsx`
-- **State Management:** Managed through React Context or Zustand
+- **State Management:** Managed through React Context
 - **Preview Updates:** Implemented with `useEffect` hooks to reflect template changes in real-time
 
 ### Certificate Information
@@ -69,9 +69,7 @@ npm run dev
 - Border style selector
 - Logo upload handling
 
-### Final Review
-- PDF generation using `lib/pdf-utils.ts`
-- Data export functionality
+
 
 ## Key Features
 - Real-time preview synchronization
@@ -86,12 +84,7 @@ npm run dev
 - **Styling Approach:** Combined Tailwind CSS with shadcn/ui components for consistent theming
 - **PDF Generation:** Server-side PDF rendering to enhance client performance
 
-## Evaluation Criteria Implementation
-- **State Management:** Zustand for complex state interactions
-- **Code Organization:** Feature-based directory structure
-- **Real-time Sync:** `useEffect` hooks with debouncing
-- **UI/UX:** Animated transitions between steps
-- **Performance:** Lazy loading for PDF preview
+
 
 ## Screenshot Guide
 
