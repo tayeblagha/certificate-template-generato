@@ -95,11 +95,10 @@ npm run dev
 
 ## Screenshot Guide
 
-```html
+
 <img src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/0.png?raw=true">
-```
 
 
-```html
+
+
 <img src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/5.png?raw=true">
-```
