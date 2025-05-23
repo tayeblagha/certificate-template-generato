@@ -96,9 +96,15 @@ npm run dev
 ## Screenshot Guide
 
 
-<img src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/0.png?raw=true">
+<img width="100%" src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/0.png?raw=true">
 
 
+<img width="100%" src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/1.png?raw=true">
 
+<img  width="100%" src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/2.png?raw=true">
 
-<img src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/5.png?raw=true">
+<img width="100%" src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/3.png?raw=true">
+
+<img width="100%" src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/4.png?raw=true">
+
+<img width="100%" src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/5.png?raw=true">
