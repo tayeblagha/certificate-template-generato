@@ -7,6 +7,9 @@ import CertificatePreview from '@/components/certificate-preview';
 import { generateCertificatePDF } from '@/lib/pdf-utils';
 
 export default function Home() {
+
+  // In case you want tou use environment variable in should be at this format 
+  //   {process.env.NEXT_PUBLIC_USER ?  process.env.NEXT_PUBLIC_USER:"Tayeb"}
   const [selectedTemplate, setSelectedTemplate] = useState<number | null>(null);
   const [formData, setFormData] = useState<FormData>({
     title: '',
