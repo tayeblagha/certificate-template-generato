@@ -2,7 +2,8 @@
 
 ## Project Structure
 
-certificate-template-generato/
+```
+certificate-template-generator/
 ├── app/
 │   ├── favicon.ico
 │   ├── globals.css
@@ -24,7 +25,7 @@ certificate-template-generato/
 │   └── utils.ts
 ├── public/ (static assets)
 └── package.json
-
+```
 
 ## Medium Help Guide
 
@@ -45,84 +46,60 @@ git clone https://github.com/tayeblagha/certificate-template-generator
 cd certificate-template-generator
 npm install
 npm run dev
+```
+
+## User Flow Implementation
+
+### Template Selection
+- **Component:** `components/template-selector.tsx`
+- **State Management:** Managed through React Context or Zustand
+- **Preview Updates:** Implemented with `useEffect` hooks to reflect template changes in real-time
+
+### Certificate Information
+- **Form Component:** `components/certificate-form.tsx`
+- **Live Preview:** `components/certificate-preview.tsx`
+- **Validation:** Using Zod for field validation
+
+### Recipient Details
+- Dynamic date picker component
+- Name input with auto-formatting
+
+### Styling Options
+- Color picker integration
+- Border style selector
+- Logo upload handling
+
+### Final Review
+- PDF generation using `lib/pdf-utils.ts`
+- Data export functionality
+
+## Key Features
+- Real-time preview synchronization
+- Responsive multi-step form
+- Template-specific form fields
+- PDF export functionality
+- Mobile-friendly design
+
+## Design Decisions
+- **State Management:** Used React Context API for cross-component state sharing
+- **Dynamic Component Loading:** Template-specific forms loaded dynamically with Next.js dynamic imports
+- **Styling Approach:** Combined Tailwind CSS with shadcn/ui components for consistent theming
+- **PDF Generation:** Server-side PDF rendering to enhance client performance
+
+## Evaluation Criteria Implementation
+- **State Management:** Zustand for complex state interactions
+- **Code Organization:** Feature-based directory structure
+- **Real-time Sync:** `useEffect` hooks with debouncing
+- **UI/UX:** Animated transitions between steps
+- **Performance:** Lazy loading for PDF preview
+
+## Screenshot Guide
+
+```html
+<img src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/0.png?raw=true">
+```
 
 
-
-
-
-User Flow Implementation
-Template Selection
-
-Component: components/template-selector.tsx
-
-State managed through React Context or Zustand
-
-Preview updates using useEffect hooks
-
-Certificate Information
-
-Form component: components/certificate-form.tsx
-
-Live preview: components/certificate-preview.tsx
-
-Field validation with Zod
-
-Recipient Details
-
-Dynamic date picker component
-
-Name input with auto-formatting
-
-Styling Options
-
-Color picker integration
-
-Border style selector
-
-Logo upload handling
-
-Final Review
-
-PDF generation using lib/pdf-utils.ts
-
-Data export functionality
-
-Key Features
-Real-time preview synchronization
-
-Responsive multi-step form
-
-Template-specific form fields
-
-PDF export functionality
-
-Mobile-friendly design
-
-Design Decisions
-State Management
-Used React Context API for cross-component state sharing
-
-Dynamic Component Loading
-Template-specific forms loaded dynamically using Next.js dynamic imports
-
-Styling Approach
-Combined Tailwind CSS with shadcn/ui components for consistent theming
-
-PDF Generation
-Implemented server-side PDF rendering to improve client performance
-
-Evaluation Criteria Implementation
-State Management: Zustand for complex state interactions
-
-Code Organization: Feature-based directory structure
-
-Real-time Sync: useEffect hooks with debouncing
-
-UI/UX: Animated transitions between steps
-
-Performance: Lazy loading for PDF preview
-
-Screenshot Guide
-
-<img src="">
-
+```html
+<img src="https://github.com/tayeblagha/certificate-template-generato/blob/main/public/screenshoots/5.png?raw=true">
+```
