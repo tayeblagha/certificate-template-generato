@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Certificate Template Generator Documentation
 
-## Getting Started
+## Project Structure
 
-First, run the development server:
+certificate-template-generato/
+├── app/
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── card/
+│   │   ├── baseCertificate.tsx
+│   │   ├── formalTemplate.tsx
+│   │   ├── modernTemplate.tsx
+│   │   └── template-selector-card.tsx
+│   ├── certificate-form.tsx
+│   ├── certificate-preview.tsx
+│   ├── template-selector.tsx
+│   └── ui/ (shadcn components)
+├── lib/
+│   ├── pdf-utils.ts
+│   ├── types.ts
+│   └── utils.ts
+├── public/ (static assets)
+└── package.json
 
+
+## Medium Help Guide
+
+### Project Overview
+A Next.js-based certificate generator that provides real-time preview updates as users customize their certificate templates through a multi-step form interface.
+
+### Technologies Used
+- Next.js 15.1.8
+- Node.js 20.19.0
+- shadcn/ui 2.5.0
+- Tailwind CSS 4.0
+- TypeScript
+- React PDF libraries
+
+### Installation
 ```bash
+git clone https://github.com/tayeblagha/certificate-template-generator
+cd certificate-template-generator
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+User Flow Implementation
+Template Selection
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Component: components/template-selector.tsx
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+State managed through React Context or Zustand
 
-## Deploy on Vercel
+Preview updates using useEffect hooks
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Certificate Information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Form component: components/certificate-form.tsx
+
+Live preview: components/certificate-preview.tsx
+
+Field validation with Zod
+
+Recipient Details
+
+Dynamic date picker component
+
+Name input with auto-formatting
+
+Styling Options
+
+Color picker integration
+
+Border style selector
+
+Logo upload handling
+
+Final Review
+
+PDF generation using lib/pdf-utils.ts
+
+Data export functionality
+
+Key Features
+Real-time preview synchronization
+
+Responsive multi-step form
+
+Template-specific form fields
+
+PDF export functionality
+
+Mobile-friendly design
+
+Design Decisions
+State Management
+Used React Context API for cross-component state sharing
+
+Dynamic Component Loading
+Template-specific forms loaded dynamically using Next.js dynamic imports
+
+Styling Approach
+Combined Tailwind CSS with shadcn/ui components for consistent theming
+
+PDF Generation
+Implemented server-side PDF rendering to improve client performance
+
+Evaluation Criteria Implementation
+State Management: Zustand for complex state interactions
+
+Code Organization: Feature-based directory structure
+
+Real-time Sync: useEffect hooks with debouncing
+
+UI/UX: Animated transitions between steps
+
+Performance: Lazy loading for PDF preview
+
+Screenshot Guide
+
+<img src="">
+
