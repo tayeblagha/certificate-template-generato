@@ -4,8 +4,7 @@ import { FormData } from '@/lib/types';
 import TemplateSelector from '@/components/template-selector';
 import CertificateForm from '@/components/certificate-form';
 import CertificatePreview from '@/components/certificate-preview';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+import { generateCertificatePDF } from '@/lib/pdf-utils';
 
 export default function Home() {
   const [selectedTemplate, setSelectedTemplate] = useState<number | null>(null);
@@ -13,31 +12,13 @@ export default function Home() {
     title: '',
     organization: '',
     recipientName: '',
-    date: '',
+    date: new Date().toISOString().split('T')[0],
     color: '#2d3748',
     borderStyle: 'solid',
     logo: null
   });
 
   const certificateRef = useRef<HTMLDivElement>(null);
-
-  const generatePDF = async () => {
-    if (!certificateRef.current) return;
-
-    const certificateElement = certificateRef.current;
-    const canvas = await html2canvas(certificateElement, {
-      scale: 2,
-      useCORS: true,
-    });
-    
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new jsPDF('l', 'mm', 'a4');
-    const imgWidth = 297;
-    const imgHeight = 210;
-    
-    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-    pdf.save('certificate.pdf');
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -49,7 +30,7 @@ export default function Home() {
             formData={formData}
             setFormData={setFormData}
             selectedTemplate={selectedTemplate}
-            generatePDF={generatePDF}
+            generatePDF={() => generateCertificatePDF(certificateRef)}
           />
           <CertificatePreview 
             formData={formData} 

@@ -5,9 +5,12 @@ const CertificatePreview = forwardRef(({ formData, template }: {
   template: number;
 }, ref: any) => {
   return (
-    <div className="bg-white shadow-lg p-8 rounded-lg" ref={ref}>
-      <div className={`w-[210mm] h-[297mm] border-${formData.borderStyle} border-4`}
-           style={{ borderColor: formData.color }}>
+    <div className="bg-white shadow-lg p-8 rounded-lg">
+      <div
+        className={`w-[210mm] h-[297mm] border-${formData.borderStyle} border-4 mx-auto`}
+        style={{ borderColor: formData.color }}
+        ref={ref}
+      >
         {template === 1 ? (
           <div className="h-full flex flex-col items-center justify-center text-center p-8">
             {formData.logo && (
